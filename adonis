@@ -105,19 +105,19 @@ for index, value in getgc(true) do
     end
 end
 
-local hook
-hook = hookfunction(getrenv().debug.info, newcclosure(function(...)
-    local functionName, functionDetails = ...
+-- Fixed hook for debug.info to prevent missing argument error
+local oldDebugInfo = hookfunction(getrenv().debug.info, newcclosure(function(...)
+    local args = {...}
 
-    if DetectedMeth and functionName == DetectedMeth then
-        if IsDebug or not IsDebug then
+    if DetectedMeth and args[1] == DetectedMeth then
+        if IsDebug then
             print("Adonis was bypassed")
         end
 
         return coroutine.yield(coroutine.running())
     end
 
-    return hook(...)
+    return oldDebugInfo(...)
 end))
 
 setthreadidentity(7)
