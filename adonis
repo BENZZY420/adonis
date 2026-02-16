@@ -1,19 +1,4 @@
---[[
-    		Compkiller Interface
 
-    Author: 4lpaca
-    License: MIT
-    Github: https://github.com/4lpaca-pin/CompKiller
-    Original: compkiller.net
-
-        Version: 2.6
-    - Improved Performance Mode
-    	Compkiller:OptimizeMode(< boolean >)
-  	- Added Auto Color Logo
-		Compkiller:CustomIconHighlight()
---]]
-
---- Export Types ---
 
 export type cloneref = (target: Instance) -> Instance;
 
@@ -373,7 +358,7 @@ local Compkiller = {
 };
 
 Compkiller.Colors = {
-	Highlight = Color3.fromRGB(17, 238, 253),
+	Highlight = Color3.fromRGB(255, 0, 0),
 	Toggle = Color3.fromRGB(14, 203, 213),
 	Risky = Color3.fromRGB(251, 255, 39),
 	BGDBColor = Color3.fromRGB(22, 24, 29),
@@ -386,6 +371,7 @@ Compkiller.Colors = {
 	LineColor = Color3.fromRGB(65, 65, 65),
 	HighStrokeColor = Color3.fromRGB(55, 56, 63),
 };
+
 
 Compkiller.Elements = {
 	Highlight = {},
@@ -6152,18 +6138,18 @@ function Compkiller:SetTheme(name)
 		};
 	elseif name == "Default" then
 		Compkiller.Colors = {
-			Highlight = Color3.fromRGB(253, 17, 17),
-			Toggle = Color3.fromRGB(213, 14, 14),
+			Highlight = Color3.fromRGB(17, 238, 253),
+			Toggle = Color3.fromRGB(14, 203, 213),
 			Risky = Color3.fromRGB(251, 255, 39),
-			BGDBColor = Color3.fromRGB(29, 22, 22),
-			BlockColor = Color3.fromRGB(34, 28, 28),
-			StrokeColor = Color3.fromRGB(43, 37, 37),
+			BGDBColor = Color3.fromRGB(22, 24, 29),
+			BlockColor = Color3.fromRGB(28, 29, 34),
+			StrokeColor = Color3.fromRGB(37, 38, 43),
 			SwitchColor = Color3.fromRGB(255, 255, 255),
-			DropColor = Color3.fromRGB(39, 33, 33),
-			MouseEnter = Color3.fromRGB(65, 55, 55),
-			BlockBackground = Color3.fromRGB(47, 39, 39),
+			DropColor = Color3.fromRGB(33, 35, 39),
+			MouseEnter = Color3.fromRGB(55, 58, 65),
+			BlockBackground = Color3.fromRGB(39, 40, 47),
 			LineColor = Color3.fromRGB(65, 65, 65),
-			HighStrokeColor = Color3.fromRGB(63, 55, 55),
+			HighStrokeColor = Color3.fromRGB(55, 56, 63),
 		};
 	elseif name == "Dark Blue" then
 		Compkiller.Colors = {
